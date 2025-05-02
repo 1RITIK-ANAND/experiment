@@ -80,7 +80,8 @@
 </head>
 <body>
   <div class="container">
-    <img class="logo" src="templates/logo.png" alt="Health Logo">
+    <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Health Logo">
+    
     <h1>Health Insurance Cost Prediction</h1>
 
     <form action="/predict" method="POST">
