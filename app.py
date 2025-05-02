@@ -5,6 +5,15 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
+@app.route('/predict_csv', methods=['POST'])
+def predict_csv():
+    file = request.files['file']
+    df = pd.read_csv(file)
+    predictions = model.predict(df)
+    return render_template('index.html', prediction_text=f'Batch Prediction Completed. Predicted values: {predictions[:5]}...')  # show first 5
+
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
