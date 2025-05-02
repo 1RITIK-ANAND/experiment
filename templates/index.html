@@ -80,7 +80,7 @@
 </head>
 <body>
   <div class="container">
-    <img class="logo" src="hicp.png" alt="Health Logo">
+    <img class="logo" src="logo.png" alt="Health Logo">
     <h1>Insurance Cost Prediction</h1>
 
     <form action="/predict" method="POST">
@@ -119,6 +119,11 @@
     {% if prediction_text %}
       <div class="result">{{ prediction_text }}</div>
     {% endif %}
+
+    <p style="margin-top: 30px; font-size: 0.85rem; color: #aaa;">
+    Made by <strong>RITIK</strong> 🤍
+  </p>
+    
   </div>
 </body>
 </html>
