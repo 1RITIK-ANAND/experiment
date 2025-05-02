@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Insurance Cost Prediction</title>
+  <title>Health Insurance Cost Prediction</title>
   <style>
     body {
       margin: 0;
@@ -119,15 +119,6 @@
     {% if prediction_text %}
       <div class="result">{{ prediction_text }}</div>
     {% endif %}
-
-    <div class="footer-text">
-      <p>Want to predict insurance cost for large datasets?</p>
-      <p>You can upload a CSV file with the same features arranged in order.</p>
-      <form action="/predict_csv" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" required>
-        <button type="submit">Upload & Predict</button>
-      </form>
-    </div>
   </div>
 </body>
 </html>
